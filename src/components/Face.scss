@@ -53,6 +53,7 @@
     }
 
     .menu {
+        z-index: 99;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -180,10 +181,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 1;
 
         img{
             width: 70%;
             animation: cardanimation 5s infinite;
+            z-index: 1;
         }
 
     }
@@ -285,13 +288,13 @@
             .back{
                 display: block;
                 position: absolute;
-                top: 10px;
-                left: 10px;
-                transform: rotate(40deg);
+                top: 15px;
+                left: 20px;
                 font-family: sans-serif;
 
                 i{
-                    font-size: 50px;
+                    font-size: 40px;
+                    color: var(--dark-color);
                 }
             }
 

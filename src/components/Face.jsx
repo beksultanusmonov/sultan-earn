@@ -40,7 +40,7 @@ function Face() {
                 </div>
                 <ul className={nav ? 'menu active' : 'menu'}>
                     <div className="back" onClick={() => setNav(false)}>
-                        <i>+</i>
+                        <i class="fa-solid fa-xmark"></i>
                     </div>
                     <a onClick={() => setMenus('home')} className={menus == 'home' ? 'active' : ''} >
                         <li>Asosiy</li>
