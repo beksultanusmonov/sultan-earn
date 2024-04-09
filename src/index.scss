@@ -44,7 +44,7 @@ body {
   border-radius: 15px;
   border: none;
   background-color: var(--blue-color);
-  color: var(--white-color);
+  color: var(--only-white);
   font-size: 25px;
   cursor: pointer;
 
@@ -52,13 +52,10 @@ body {
     opacity: 0.9;
     transform: scale(1.05);
     
-    i {
-      display: inline-block;
-    }
   }
 
   i {
     margin-left: 15px;
-    display: none;
+    display: inline-block;
   }
 }
