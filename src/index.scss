@@ -2,7 +2,9 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--bg-color);
+  // background-color: var(--bg-color);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				url("../public/sultan-bg.jpg") center/cover no-repeat fixed;
 }
 
 *{
@@ -15,6 +17,7 @@ body {
 
 :root {
   --white-color: #FFFFFF;
+  --only-white: #FFFFFF;
   --dark-color: #000;
   --bg-color: #D6D6D6;
   --green-color: #00B533;
@@ -23,6 +26,7 @@ body {
   --modal-bg-color: #eeeeee;
   --blue-color: #1218c0ec;
   --wh-grey-color: #acacac;
+  --red-color: #df1313;
 }
 
 .dark-mode {

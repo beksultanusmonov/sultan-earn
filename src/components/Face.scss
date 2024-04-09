@@ -1,3 +1,28 @@
+@keyframes cardanimation {
+    25%{
+        transform: translateY(15px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes register {
+    0% {
+        transform: rotateX(10vw);
+    }
+
+    100% {
+        transform: rotateX(0);
+    }
+}
+
 .header {
     width: 100vw;
     padding: 10px 15px;
@@ -6,6 +31,9 @@
     border-bottom-right-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
     z-index: 1000;
+    position: sticky;
+    top: 0;
+    left: 0;
 
     .container {
         max-width: 1300px;
@@ -24,6 +52,7 @@
         font-weight: 700;
         text-transform: uppercase;
         color: var(--blue-color);
+        cursor: pointer;
     }
 
     .bar{
@@ -85,7 +114,7 @@
         a li:hover:after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -2px;
             left: 0;
             width: 60%;
             height: 3px;
@@ -168,7 +197,7 @@
 
         p {
             font-size: 30px;
-            color: var(--dark-color);
+            color: var(--only-white);
         }
 
         .btn{
@@ -192,20 +221,7 @@
     }
 }
 
-@keyframes cardanimation {
-    25%{
-        transform: translateY(15px);
-    }
-    50%{
-        transform: translateY(0px);
-    }
-    75%{
-        transform: translateY(-15px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
+
 
 
 // Statistics sction
@@ -264,6 +280,156 @@
 }
 
 
+// Register section
+.register{
+    padding: 15px 0;
+
+    .container{
+        border: 1px solid var(--only-white);
+        border-radius: 20px;
+        max-width: 1300px;
+        width: 98vw;
+        margin: 0 auto;
+        padding: 10px;
+        background: transparent;
+        backdrop-filter: blur(8px);
+        min-height: 80vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
+.register .container {
+    .left{
+        width: 100%;
+        color: var(--only-white);
+
+        h1{
+            // color: var(--blue-color);
+            font-size: 50px;
+            position: absolute;
+            top: 20px;
+        }
+
+        h2 {
+            color: var(--red-color);
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        p{
+            font-size: 28px;
+        }
+    }
+
+    .right {
+        padding: 10px 0;
+        color: var(--only-white);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .right .form{
+        border-radius: 15px;
+        padding: 10px;
+        background: rgba(17, 17, 17, 0.438);
+        backdrop-filter: blur(8px);
+        transition: all 1s;
+        width: 100%;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+
+        
+
+
+        i {
+            display: inline-block;
+            font-size: 18px;
+            margin-top: 10px;
+            font-style: normal;
+
+        }
+
+        .sing_up, .sing_in {
+            display: inline-block;
+            color: var(--red-color);
+            font-weight: 600;
+            font-size: 20px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        .sing_in {
+            color: var(--blue-color);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .message {
+            background-color: var(--green-color);
+            padding: 10px 5px;
+            width: 100%;
+            border-radius: 5px;
+            
+            &.error {
+                background-color: var(--red-color);
+            }
+        }
+
+        label {
+            display: block;
+            padding: 10px;
+            margin-top: 10px;
+
+            span {
+                display: block;
+                
+                font-size: 20px;
+            }
+
+            input {
+                display: block;
+                width: 90%;
+                margin: 0 auto;
+                height: 45px;
+                border: 1px solid var(--only-white);
+                background-color: transparent;
+                color: var(--only-white);
+                font-size: 23px;
+                padding-left: 10px;
+                border-radius: 5px;
+
+                &::placeholder{
+                    color: var(--only-white);
+                }
+            }
+
+        }
+
+        button {
+            display: block;
+            width: 60%;
+            margin: 0 auto;
+            height: 45px;
+            cursor: pointer;
+            background-color: var(--blue-color);
+            border: none;
+            border-radius: 5px;
+            font-size: 25px;
+            color: var(--only-white);
+        }
+    }
+}
 
 // Responsive
 @media screen and (max-width: 992px) {
@@ -335,6 +501,26 @@
         }
     }
 
+    .register .container {
+        max-width: 768px;
+
+        .right .form{
+            h1 {
+                font-size: 30px;
+            }
+    
+            label {
+                margin: 0;
+    
+                input{
+                    width: 100%;
+                    margin: 0;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 768px){
@@ -350,6 +536,29 @@
         padding: 10px;
         max-width: 500px;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .register .container {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 500px;
+
+        .left {
+            margin-bottom: 20px;
+            h1 {
+                position: relative;
+                top: 10px;
+                font-size: 45px;
+            }
+
+            h2 {
+                margin-top: 15px;
+                font-size: 35px;
+            }
+
+            p{
+                font-size: 23px;
+            }
+        }
     }
 }
 
@@ -402,6 +611,45 @@
         .desc {
             h1 {
                 font-size: 28px;
+            }
+        }
+    }
+
+    .register .container {
+        padding: 10px 5px;
+        .left {
+            margin-bottom: 20px;
+            padding: 5px 0;
+
+            h1 {
+                top: 5px;
+                font-size: 40px;
+                margin-bottom: 0;
+            }
+
+            h2 {
+                margin-top: 5px;
+                font-size: 30px;
+            }
+
+            p{
+                font-size: 18px;
+            }
+        }
+
+        .right .form{
+            h1 {
+                font-size: 28px;
+            }
+
+            label {
+                span {
+                    font-size: 18px;
+                }
+
+                input {
+                    font-size: 20px;
+                }
             }
         }
     }
