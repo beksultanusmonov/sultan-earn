@@ -180,7 +180,7 @@
         h3{
             font-size: 30px;
             font-weight: 500;
-            color: var(--grey-color);
+            color: var(--only-white);
         }
 
         h1{
@@ -231,7 +231,7 @@
     .container {
         max-width: 1300px;
         margin: 0 auto;
-        padding: 10px 0;
+        padding: 10px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
@@ -239,7 +239,7 @@
         .card {
             background-color: var(--white-color);
             border-radius: 15px;
-            min-height: 15vh;
+            max-height: 130px;
             padding: 10px;
             display: flex;
             align-items: center;
@@ -498,6 +498,7 @@
         .container{
             max-width: 768px;
             grid-template-columns: repeat(2, 1fr);
+
         }
     }
 
@@ -536,6 +537,10 @@
         padding: 10px;
         max-width: 500px;
         grid-template-columns: repeat(1, 1fr);
+
+        .card {
+            max-height: 110px;
+        }
     }
 
     .register .container {

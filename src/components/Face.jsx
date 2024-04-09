@@ -127,19 +127,19 @@ function Face() {
                                 </>}
                                 <label>
                                     <span>Nickname:</span>
-                                    <input type="text" name='nickname' placeholder='Nickname kiriting ....'/>
+                                    <input type="text" name='nickname' placeholder='Nickname kiriting ....' required/>
                                 </label>
                                 <label>
                                     <span>Email:</span>
-                                    <input type="email" name='nickname' placeholder='Email kiriting ....'/>
+                                    <input type="email" name='nickname' placeholder='Email kiriting ....' required/>
                                 </label>
                                 <label>
                                     <span>Parol:</span>
-                                    <input type="password" name='nickname' placeholder='parol kiriting ....'/>
+                                    <input type="password" name='nickname' placeholder='parol kiriting ....' required/>
                                 </label>
                                 <label>
                                     <span>Qayta Parol:</span>
-                                    <input type="password" name='nickname' placeholder='Qayta qarol kiriting ....'/>
+                                    <input type="password" name='nickname' placeholder='Qayta qarol kiriting ....' required/>
                                 </label>
                                 <button>Yaratish</button>
                                 <i> Sizda accaunt bormi ?</i> <a className="sing_in" onClick={() => setRegister('sign_in')}>Kirish</a>
@@ -155,11 +155,11 @@ function Face() {
                                 </>}
                                 <label>
                                     <span>Email:</span>
-                                    <input type="email" name='nickname' placeholder='Email kiriting ....'/>
+                                    <input type="email" name='nickname' placeholder='Email kiriting ....' required/>
                                 </label>
                                 <label>
                                     <span>Parol:</span>
-                                    <input type="password" name='nickname' placeholder='parol kiriting ....'/>
+                                    <input type="password" name='nickname' placeholder='parol kiriting ....' required/>
                                 </label>
                                 <button>Kirish</button>
 
